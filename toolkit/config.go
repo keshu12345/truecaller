@@ -10,12 +10,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-// NewConfig loads the application configurations from the given config file path.
-// Can specify the path of a second config in overridePath for overriding the config in configPath.
-// Pass "" (empty string) for overridePath in case no overriding behaviour is desired.
-// envVars map is used to bind environment variables with particular fields in yaml config file
-// envVars can be used as an optional parameter so already existing services using NewConfig function need necessarily pass the parameter
-// it is recommended to pass envVars in NewConfig only once
+
 func NewConfig(conf interface{}, configPath, overridePath string, envVars ...map[string]string) error {
 
 	flag.Parse()
