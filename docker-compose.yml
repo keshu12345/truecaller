@@ -1,0 +1,22 @@
+
+version: '3.7'
+services:
+
+  maching-prefixes:
+    image: maching-prefixes
+    container_name: maching-prefixes
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CONFIG_PATH=config/local
+    ports:
+#       REST server
+      - "8080:8080"
+    networks:
+      - mp
+networks:
+  mp:
+    driver: bridge
+
+

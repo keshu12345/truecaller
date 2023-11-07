@@ -1,0 +1,31 @@
+info:
+  contact: {}
+paths:
+  /{prefix_name}:
+    get:
+      consumes:
+      - application/json
+      description: get string by prefix_name
+      parameters:
+      - description: prefix_name
+        in: path
+        name: prefix_name
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: Return
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Show an GetMatchingPrefixRecord
+      tags:
+      - GetMatchingPrefixRecord
+swagger: "2.0"

@@ -1,0 +1,12 @@
+
+environmentName: 'prod'
+server:
+  restServicePort: 8080
+  ReadTimeout: 5
+  WriteTimeout: 15
+  IdleTimeout: 20
+
+swagger:
+  host: localhost:8080
+
+
